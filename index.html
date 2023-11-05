@@ -1,58 +1,121 @@
+<!-- Define the document type as HTML -->
 <!DOCTYPE html>
 
+<!-- Start the HTML document -->
 <html>
-<head>
-    <Title>Calculator</title>
-    <link rel="stylesheet" type="text/css" href="assets/calc_style.css"/>
-    <script language="JavaScript" src="code.js" type="text/javascript"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/favicon.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-<body>
-    <div id="calculator">
-        <h1>Calculator</h1>
-        <p id="last_operation_history"></p>
-        <p id="box" class="box">0</p>
-        <table id="table">
-            <tr>
-                <td><button onclick="calculate_percentage()">%</button></td>
-                <td><button onclick="clear_entry()">CE</button></td>
-                <td><button onclick="button_clear()">C</button></td>
-                <td><button id="backspace_btn" onclick="backspace_remove()"></button></td>
-            </tr>
-            <tr>
-                <td><button onclick="division_one()">¹∕ₓ</button></td>
-                <td><button onclick="power_of()">𝑥²</button></td>
-                <td><button onclick="square_root()">√𝑥</button></td>
-                <td><button id="plusOp" value="+" class="operator" onclick="button_number('+')">+</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="button_number(7)">7</button></td>
-                <td><button onclick="button_number(8)">8</button></td>
-                <td><button onclick="button_number(9)">9</button></td>
-                <td><button id="subOp" value="-" class="operator" onclick="button_number('-')">-</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="button_number(4)">4</button></td>
-                <td><button onclick="button_number(5)">5</button></td>
-                <td><button onclick="button_number(6)">6</button></td>
-                <td><button id="multiOp" value="*" class="operator" onclick="button_number('*')">×</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="button_number(1)">1</button></td>
-                <td><button onclick="button_number(2)">2</button></td>
-                <td><button onclick="button_number(3)">3</button></td>            
-                <td><button id="divOp" value="/" class="operator" onclick="button_number('/')">÷</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="plus_minus()">±</button></td>
-                <td><button onclick="button_number(0)">0</button></td>
-                <td><button id="dot" value="." onclick="button_number('.')">.</button></td>
-                <td colspan="4"><button value="=" class="operator" id="equal_sign" onclick="button_number('=')">=</button></td>
-            </tr>
-        </table>
-    </div>
-</body>
+    <head>
+        <title>Calculator</title> <!-- Set the title of the web page -->
+        <link rel="stylesheet" type="text/css" href="..\CalculatorProject\styles\style.css" /> <!-- Link to the CSS stylesheet -->
+        <script
+            language="JavaScript"
+            src="..\CalculatorProject\src\main.js"
+            type="text/javascript"
+        ></script> <!-- Link to the JavaScript file -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+            rel="stylesheet"
+        /> <!-- Link to Google Fonts for the 'Roboto' font -->
+        <link rel="icon" type="image/png" href="assets/favicon.png" /> <!-- Set the website favicon -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Configure the viewport for responsiveness -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!-- Set character encoding -->
+    </head>
+    <body>
+        <div id="calculator">
+            <h1>Calculator</h1> <!-- Heading for the calculator title -->
+            <p id="last_operation_history"></p> <!-- Placeholder for displaying the last operation -->
+            <p id="box" class="box">0</p> <!-- Display the calculator input/output -->
+            <table id="table">
+                <tr> <!-- Start of the first row -->
+                    <td><button onclick="calculate_percentage()">%</button></td> <!-- Button for calculating percentage -->
+                    <td><button onclick="clear_entry()">CE</button></td> <!-- Button for clearing the current entry -->
+                    <td><button onclick="button_clear()">C</button></td> <!-- Button for clearing all input -->
+                    <td>
+                        <button
+                            id="backspace_btn"
+                            onclick="backspace_remove()"
+                        ></button> <!-- Button for backspace (deleting the last character) -->
+                    </td>
+                </tr>
+                <tr> <!-- End of the first row, Start of the second row -->
+                    <td><button onclick="division_one()">¹∕ₓ</button></td> <!-- Button for reciprocal (1/x) calculation -->
+                    <td><button onclick="power_of()">𝑥²</button></td> <!-- Button for squaring the number -->
+                    <td><button onclick="square_root()">√𝑥</button></td> <!-- Button for square root calculation -->
+                    <td>
+                        <button
+                            id="plusOp"
+                            value="+"
+                            class="operator"
+                            onclick="button_number('+')"
+                        >
+                            + <!-- Button for addition -->
+                        </button>
+                    </td>
+                </tr>
+                <tr> <!-- End of the second row, Start of the third row -->
+                    <td><button onclick="button_number(7)">7</button></td> <!-- Button for the digit 7 -->
+                    <td><button onclick="button_number(8)">8</button></td> <!-- Button for the digit 8 -->
+                    <td><button onclick="button_number(9)">9</button></td> <!-- Button for the digit 9 -->
+                    <td>
+                        <button
+                            id="subOp"
+                            value="-"
+                            class="operator"
+                            onclick="button_number('-')"
+                        >
+                            - <!-- Button for subtraction -->
+                        </button>
+                    </td>
+                </tr>
+                <tr> <!-- End of the third row, Start of the fourth row -->
+                    <td><button onclick="button_number(4)">4</button></td> <!-- Button for the digit 4 -->
+                    <td><button onclick="button_number(5)">5</button></td> <!-- Button for the digit 5 -->
+                    <td><button onclick="button_number(6)">6</button></td> <!-- Button for the digit 6 -->
+                    <td>
+                        <button
+                            id="multiOp"
+                            value="*"
+                            class="operator"
+                            onclick="button_number('*')"
+                        >
+                            × <!-- Button for multiplication -->
+                        </button>
+                    </td>
+                </tr>
+                <tr> <!-- End of the fourth row, Start of the fifth row -->
+                    <td><button onclick="button_number(1)">1</button></td> <!-- Button for the digit 1 -->
+                    <td><button onclick="button_number(2)">2</button></td> <!-- Button for the digit 2 -->
+                    <td><button onclick="button_number(3)">3</button></td> <!-- Button for the digit 3 -->
+                    <td>
+                        <button
+                            id="divOp"
+                            value="/"
+                            class="operator"
+                            onclick="button_number('/')"
+                        >
+                            ÷ <!-- Button for division -->
+                        </button>
+                    </td>
+                </tr>
+                <tr> <!-- End of the fifth row, Start of the sixth row -->
+                    <td><button onclick="plus_minus()">±</button></td> <!-- Button for changing sign (+/-) -->
+                    <td><button onclick="button_number(0)">0</button></td> <!-- Button for the digit 0 -->
+                    <td>
+                        <button id="dot" value="." onclick="button_number('.')">
+                            . <!-- Button for the decimal point -->
+                        </button>
+                    </td>
+                    <td colspan="4">
+                        <button
+                            value="="
+                            class="operator"
+                            id="equal_sign"
+                            onclick="button_number('=')"
+                        >
+                            = <!-- Button for calculating the result -->
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
 </html>
