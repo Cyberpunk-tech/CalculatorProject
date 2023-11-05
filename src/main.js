@@ -1,30 +1,31 @@
-var operators = ["+", "-", "/", "*"];
+var operators = ["+", "-", "/", "*"];    // Define an array of supported operators
+// Initialize variables for various elements
+var box = null; // Calculator display
+var last_operation_history = null; // Last operation history display
+var operator = null; // Operator buttons
+var equal = null;  // Equal sign button
+var dot = null; // Decimal point button
 
-var box = null;
-var last_operation_history = null;
-var operator = null;
-var equal = null;
-var dot = null;
-
+// Initialize flags and variables for calculation
 var firstNum = true;
 
 var numbers = [];
 var operator_value;
-var last_button;
-var calc_operator;
+var last_button; // The last button clicked
+var calc_operator;  // The current operator for calculation
 
-var total;
+var total; // Variable to store the total result
 
-var key_combination = []
+var key_combination = []  // Initialize an array to store key combinations
 function button_number(button) {
-
+ // Get references to various HTML elements
     operator = document.getElementsByClassName("operator");
     box = document.getElementById("box");
     last_operation_history = document.getElementById("last_operation_history");
     equal = document.getElementById("equal_sign").value;
     dot = document.getElementById("dot").value;
     
-    last_button = button;
+    last_button = button;   // Store the last button clicked
 
     // if button is not an operator or = sign
     if (!operators.includes(button) && button!=equal){
