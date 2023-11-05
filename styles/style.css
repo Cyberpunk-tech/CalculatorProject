@@ -1,85 +1,101 @@
+/* Set the base font size, positioning, and background color for the page */
 body {
-    font-size: 2.5vh;
+    font-size: 2.5vh; /* Set font size relative to viewport height */
     top: 15%;
     left: 40%;
-    margin: 0 auto;
-    background-color: black;
-    font-family: 'Roboto', sans-serif;
+    margin: 0 auto; /* Center the content horizontally */
+    background-color: black; /* Background color of the page */
+    font-family: 'Roboto', sans-serif; /* Specify font-family */
 }
 
+/* Styling for the main heading */
 h1 {
-    color: white;
-    text-align: center;
-    margin: 0;
+    color: white; /* Text color for the heading */
+    text-align: center; /* Center-align the text */
+    margin: 0; /* Remove margin around the heading */
 }
 
+/* Styles for the calculator container */
 #calculator {
     width: auto;
     height: auto;
-    padding: 1.5vh;
-    border: 5px solid #666666;
-    border-radius: 15px;
-    margin: 0;
+    padding: 1.5vh; /* Add padding inside the calculator */
+    border: 5px solid #666666; /* Border with color for the calculator */
+    border-radius: 15px; /* Rounded corners */
+    margin: 0; /* Remove margin */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    -ms-transform: translate(-50%, -50%); /* Center the calculator for Internet Explorer */
+    transform: translate(-50%, -50%); /* Center the calculator */
 }
 
+/* Styling for the box element that displays calculator input/output */
 .box {
-    text-align:right;
-    font-size: 2.8vh;
-    height: 3vh;
-    line-height: 3vh;
-    padding: 1em;
-    border: 2px solid #e68a00;
-    color: white;
-    border-radius: 15px;
-    background-color: black;
+    text-align: right; /* Right-align text within the box */
+    font-size: 2.8vh; /* Set font size relative to viewport height */
+    height: 3vh; /* Fixed height for the box */
+    line-height: 3vh; /* Center the text vertically */
+    padding: 1em; /* Add padding inside the box */
+    border: 2px solid #e68a00; /* Border with color for the box */
+    color: white; /* Text color */
+    border-radius: 15px; /* Rounded corners */
+    background-color: black; /* Background color */
 }
 
+/* Styles for the element displaying the last operation history */
 #last_operation_history {
     height: 1.8vh;
     font-size: 1.8vh;
-    text-align:right;
-    padding-right: 1.5vh;
-    color: rgb(177, 176, 176);
-    background-color: black;
+    text-align: right; /* Right-align the text */
+    padding-right: 1.5vh; /* Add padding on the right */
+    color: rgb(177, 176, 176); /* Text color */
+    background-color: black; /* Background color */
 }
 
+/* Styles for calculator buttons */
 button {
-    width:9vh;
-    height: 9vh;
-    font-weight:bold;
-    font-size: 3vh;
-    color: white;
-    background-color: #666666;
-    border-radius: 50%;
-    border: 1px solid #333333;
+    width: 9vh; /* Set width of the buttons */
+    height: 9vh; /* Set height of the buttons */
+    font-weight: bold; /* Make the text bold */
+    font-size: 3vh; /* Set font size relative to viewport height */
+    color: white; /* Text color */
+    background-color: #666666; /* Background color */
+    border-radius: 50%; /* Rounded shape for the buttons */
+    border: 1px solid #333333; /* Border with color for the buttons */
 }
 
+/* Styling for the backspace button */
 #backspace_btn {
-    background-image: url("../assets/back_remove.png");
+    background-image: url("../assets/back_remove.png"); /* Set a background image */
     background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 1.7em;
+    background-position: 50% 50%; /* Center the background image */
+    background-size: 1.7em; /* Set background image size */
 }
 
+/* Styles for button hover state */
 button:hover {
-    background-color: #999999;
-    cursor: pointer;
+    background-color: #999999; /* Background color on hover */
+    cursor: pointer; /* Display a pointer cursor on hover */
 }
 
+/* Styling for operator buttons */
 .operator {
-    background-color: #e68a00;
+    background-color: #e68a00; /* Background color for operator buttons */
 }
 
+/* Styles for operator buttons in the hover state */
 .operator:hover {
-    background-color: #ffd11a;
+    background-color: #ffd11a; /* Background color on hover for operator buttons */
 }
 
+/* Styles for the equal sign button */
 #equal_sign {
-    width: 100%;
-    border-radius: 15px;
+    width: 100%; /* Set full width */
+    border-radius: 15px; /* Rounded corners */
 }
+
+
+
+
+
