@@ -1,4 +1,4 @@
-var operators = ['+', '-', '/', '*'];
+var operators = ["+", "-", "/", "*"];
 
 var box = null;
 var last_operation_history = null;
@@ -10,19 +10,20 @@ var firstNum = true;
 
 var numbers = [];
 var operator_value;
-var last_button;
-var calc_operator;
+var last_button; // The last button clicked
+var calc_operator;  // The current operator for calculation
 
-var total;
+var total; // Variable to store the total result
 
-var key_combination = [];
+var key_combination = []
 function button_number(button) {
-    operator = document.getElementsByClassName('operator');
-    box = document.getElementById('box');
-    last_operation_history = document.getElementById('last_operation_history');
-    equal = document.getElementById('equal_sign').value;
-    dot = document.getElementById('dot').value;
 
+    operator = document.getElementsByClassName("operator");
+    box = document.getElementById("box");
+    last_operation_history = document.getElementById("last_operation_history");
+    equal = document.getElementById("equal_sign").value;
+    dot = document.getElementById("dot").value;
+    
     last_button = button;
 
     // if button is not an operator or = sign
